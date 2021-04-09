@@ -9,10 +9,10 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-// APP SETS
+// APP 
 app.set("view-engine", "ejs");
-app.set("views", path.join(__dirname, "/views"));
-app.use(express.static(__dirname + "/public"));
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public/style"));
 
 // HOME ROUTE
 app.get("/", function (req, res) {
